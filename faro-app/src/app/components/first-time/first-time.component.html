@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Bienvenido a Casa Faro !Queremos conocerte!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <form [formGroup]="formFirstTime" (ngSubmit)="onSubmit()">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                <input id="first-name" type="text" formControlName="nombre" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">¿De donde vienes?</span>
+                <input id="deDondeViene" type="text" formControlName="deDondeViene" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">¿Como te enteraste de Faro?</span>
+                <input id="comoSeEntero" type="text" formControlName="comoSeEntero" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+                <input id="telefono" type="text" formControlName="telefono" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success" [disabled]="!formFirstTime.valid">Enviar</button>
+        </form>
+    </div>
+</div>
